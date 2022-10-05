@@ -74,20 +74,10 @@ public class Student {
     }
 
     public List<Course> getCourses(){
-        System.out.println("Courses for student " +getUsername()+": ");
-        for (Course course : this.Courses) {
-            System.out.println(course.getCourseID());
-        }
-        System.out.println("\n");
         return Courses;
     }
 
     public List<Module> getModules(){
-        System.out.println("Modules for student " +getUsername()+": ");
-            for (Module module : moduleList) {
-                System.out.println(module.getModuleName());
-            }
-        System.out.println("\n");
         return moduleList;
     }
 }
