@@ -12,6 +12,9 @@ plugins {
     id 'war'
 }
 
+group 'org.example'
+version 'v1'
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -34,4 +37,9 @@ dependencies {
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+    testLogging {
+        exceptionFormat "full"
+        events "skipped", "passed", "failed"
+        showStandardStreams true
+    }
 }
